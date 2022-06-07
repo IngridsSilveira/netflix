@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, 'Times New Roman', Times, serif;
+    background: black;
+    overflow-x: hidden;
+}
+/* MENU E HEADER */
+#header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    background: black;
+    color: white;
+}
+#titulo-principal {
+    color: #E50914;
+    font-size: 60px;
+    font-family: 'Arial Black', Times;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header ul {
+    display: flex;
+    margin-right: 20px;
+}
+#header li {
+    padding: 0 10px;
+    font-size: 20px;
+    color: #aaaaaa;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+#header li:hover {
+    color: #ffffff;
+}
+/* Filme principal */
+.container {
+    background: linear-gradient(rgba(0, 0, 0, .50),rgba(0,0,0,.50)100%) , url('../img/capa-house.jpg');
+    background-size: cover;
+    height: 100%;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 5px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.container h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#descricao {
+    width: 28%;
+    padding: 15px 5px;
+}
+#descricao p {
+    font-size: 18px;
+    line-height: 25px;
+}
+#button {
+    padding: 20px 0;
+}
+.btn {
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 15px;
+    width: 210px;
+}
+.btn:hover {
+    border: 1px solid white;
+    background: white;
+    color: black;
+}
+/*  FILMES */
+.filmes {
+    margin-top: 10px;
+}
+.filmes h3 {
+    color: white;
+    font-size: 40px;
+}
+.box-filme {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+/* Rodapé */
+footer {
+    background: black;
+    color: #aaaaaa;
+    text-align: right;
+    margin-bottom:30px;
+    margin-right: 20px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #0095f6;
+}
+/*MEDIA QUERY */
+@media screen and (max-width: 700px){
+    #header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    #titulo-principal {
+        margin-top: 10px;
+        padding: 0;
+    }
+    #descricao {
+        width: 50%;
+    }
+    .container h1 {
+        font-size: 38px;
+    }
+    #button {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn {
+        margin: 5px;
+        width: 250px;
+    }
+}
