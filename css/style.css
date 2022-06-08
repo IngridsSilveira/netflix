@@ -24,8 +24,9 @@ h3 {
 #header {
     display: flex;
     width: 100%;
-    height: 90px;
+    height: 50px;
     color: white;
+    background: black;
 }
 #perifericos {
     display: flex;
@@ -34,23 +35,27 @@ h3 {
     width: 100%;
 }
 #perifericos p {
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
-#logo {
-    width: 300px;
-    height: 200px;
+.logo {
+    margin-left: 20px;
     margin-top: -40px;
 }
+#logo {
+    width: 200px;
+    height: 120px;
+    cursor: pointer;
+}
 .badget {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     margin: 0 30px;
     cursor: pointer;
 }
 .badget-perfil {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     margin-right: 60px;
     border-radius: 5px;
     cursor: pointer;
@@ -60,17 +65,19 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top: -10px;
+    margin-left: -65px;
 }
-#header ul {
+.menu ul {
     display: flex;
-}
-#header li {
-    padding: 0 10px;
-    font-size: 22px;
-    color: #ffffff;
     cursor: pointer;
 }
-#header li:hover {
+.menu li {
+    font-size: 16px;
+    padding: 0 10px;
+    color: #ffffff;
+}
+.menu li:hover {
     color: #aaaaaa;
 }
 /* Filme principal */
@@ -86,6 +93,12 @@ h3 {
 }
 .container img {
     width: 500px;
+}
+.container p {
+    width: 400px;
+    font-size: 18px;
+    margin-bottom: -20px;
+    margin-left: 30px;
 }
 #button {
     padding: 50px 0;
@@ -124,46 +137,43 @@ i {
 .btn2:hover {
     background: #aaaaaa;
 }
-/*  SECTION MINHA LISTA */
-.section-minha-lista {
-    margin-left: -80px;
-}
+/* Parte do carossel e das fotos */
 .carossel {
     background: black;
     margin-left: 80px;
 }
 .box-filme {
-    height: 100%;
-    width: 100%;
     cursor: pointer;
 }
-.item {
-    width: 100%;
-    height: 200px;
+.box-filme:hover {
+    transform: scale(1.05);
 }
 .owl-theme {
-    height: 200px;
     margin-bottom: -55px;
-}
-.owl-carousel {
-    width: 500px;
 }
 .owl-dots {
      display: none;
 }
+/*  SECTION MINHA LISTA */
+.section-minha-lista {
+    margin-left: -90px;
+}
 /* SECTION EM ALTA */
-
+.section-em-alta {
+    margin-top: -30px;
+}
 /* SECTION ADICIONADOS RECENTEMENTE */
 .section-last {
     margin-top: 30px;
+    margin-bottom: 60px;
 }
 /* Rodapé */
 footer {
     background: black;
     color: #aaaaaa;
-    text-align: right;
-    margin-bottom:30px;
-    margin-right: 20px;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
 }
 footer a {
     color: white;
@@ -172,30 +182,77 @@ footer a {
 footer a:hover {
     color: #0095f6;
 }
+/* MENU RESPONSIVO */
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 380px;
+    cursor: pointer;
+}
+.navegar {
+    font-size: 12px;
+}
 /*MEDIA QUERY */
-@media screen and (max-width: 700px){
-    #header {
+@media screen and (max-width: 900px) {
+    #perifericos {
+        display: flex;
+    }
+    #perifericos p {
+        display: none;
+    }
+    .badget {
+         margin: 0 10px;
+    }
+    .menu nav ul{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
+        display: none;
+        position: absolute;
+        width: 150px;
+        right: 300px;
+        top: 50px;
+        background: black;
     }
-    #titulo-principal {
-        margin-top: 10px;
-        padding: 0;
+    .menu li {
+        padding: 3px 0;
+        color: white;
     }
-    #descricao {
-        width: 50%;
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -10px;
+        top: -32px;
+        justify-content: space-around;
     }
-    .container h1 {
-        font-size: 38px;
+    .container img {
+        width: 80%;
+    }
+    .container p {
+        width: 100%;
     }
     #button {
         display: flex;
         flex-direction: column;
     }
     .btn {
-        margin: 5px;
-        width: 250px;
+        margin: 10px;
+    }
+}
+@media screen and (min-width: 901px) and (max-width: 1024px){
+    #perifericos p {
+        font-size: 14px;
+    }
+    .badget,
+    .badget-perfil {
+        width: 10%;
+    }
+    .menu {
+       margin-left: -10px;
+    }
+    .menu li {
+        font-size: 12px;
     }
 }
